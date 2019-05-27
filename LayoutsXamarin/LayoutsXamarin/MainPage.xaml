@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Padding="40"
+             x:Class="LayoutsXamarin.MainPage">
+
+    <!--<Label Text="Welcome to Xamarin.Forms!" 
+               BackgroundColor="Silver"
+               VerticalOptions="Center"  
+               WidthRequest="100"
+               HeightRequest="300"
+               HorizontalOptions="Center" />-->
+    <!--<StackLayout>
+        <Label Text="Start" HorizontalOptions="Start" BackgroundColor="Silver" />
+        <Label Text="Center" HorizontalOptions="Center" BackgroundColor="Silver" />
+        <Label Text="End" HorizontalOptions="End" BackgroundColor="Silver" />
+        <Label Text="Fill" HorizontalOptions="Fill" BackgroundColor="Silver" />
+
+        <BoxView Color="Silver" />
+        <BoxView Color="Blue" VerticalOptions="FillAndExpand"/>
+        <BoxView Color="Gray" />
+    </StackLayout>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Bill" VerticalOptions="Center" Grid.Column="0" />
+        <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric"  Grid.Column="1"/>
+        <Label Text="Tip" Grid.Row="1"/>
+        <Label x:Name="tipOutput" Text="0.00" Grid.Row="1" Grid.Column="1" />
+        <Label Text="Total"  Grid.Row="2"/>
+        <Label x:Name="totalOutput" Text="0.00"  Grid.Row="2" Grid.Column="1"/>
+
+        <Label Text="Tip Percentage" Grid.Row="3"/>
+        <Label x:Name="tipPercent" Text="15%" Grid.Row="3" Grid.Column="1"/>
+
+        <Slider x:Name="tipPercentSlider" Grid.Row="4" Grid.ColumnSpan="2" Minimum="0" Maximum="100" Value="15" />
+
+        <Button Text="15%" Clicked="OnNormalTip"   Grid.Row="5" HorizontalOptions="CenterAndExpand" />
+        <Button Text="20%" Clicked="OnGenerousTip" Grid.Row="5" Grid.Column="1" HorizontalOptions="CenterAndExpand" />
+
+        <Button x:Name="roundDown" Text="Round Down" Grid.Row="6" HorizontalOptions="CenterAndExpand" />
+        <Button x:Name="roundUp"   Text="Round Up"   Grid.Row="6" Grid.Column="1" HorizontalOptions="CenterAndExpand" />
+    </Grid>
+
+
+    <!--<StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Bill" VerticalOptions="Center" />
+            <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+            <Label Text="Tip" />
+            <Label x:Name="tipOutput" Text="0.00" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Total" />
+            <Label x:Name="totalOutput" Text="0.00" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+            <Label Text="Tip Percentage" />
+            <Label x:Name="tipPercent" Text="15%" />
+        </StackLayout>
+
+        <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" />
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="15%" Clicked="OnNormalTip"   HorizontalOptions="CenterAndExpand" />
+            <Button Text="20%" Clicked="OnGenerousTip" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="roundDown" Text="Round Down" HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="roundUp"   Text="Round Up"   HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+    </StackLayout>-->
+
+</ContentPage>
