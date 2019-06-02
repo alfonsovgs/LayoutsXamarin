@@ -10,7 +10,7 @@ namespace LayoutsXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new StandardTipPage();
         }
 
         protected override void OnStart()

@@ -6,6 +6,15 @@
              mc:Ignorable="d"
              x:Class="LayoutsXamarin.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="22"></Setter>
+            </Style>
 
+            <Style x:Key="infoLabelStyle" BasedOn="{StaticResource baseLabelStyle}" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
